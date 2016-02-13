@@ -22,7 +22,7 @@ namespace Lab
             Console.ReadKey();
             int rezA = x * x;
             int rezB = rezA * rezA;
-            int rezC = rezB * rezA;
+            int rezC = rezB * rezB;
             Console.WriteLine("Возведение в квадрат");
             Console.WriteLine("Z1=" + rezA);
             Console.WriteLine("Возведение в 4 степень");
