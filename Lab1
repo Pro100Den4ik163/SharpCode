@@ -40,13 +40,13 @@ namespace Lab
             Console.WriteLine("Чтобы перейти к просмотру решения задачи нажмите Enter.");
             Console.ReadKey();
             Console.WriteLine("Введите значение x");
-            float x1 = float.Parse(Console.ReadLine()); //Ввод с клавиатуры...
+            double x1 = double.Parse(Console.ReadLine()); //Ввод с клавиатуры...
             int c = (int)x1;
-            float d = (x1 - c); // вычисление дробной части, переменная а-убирает запятую.
+            double d = x1 - c; // вычисление дробной части.
             Console.Write("Введённое значение");
             Console.WriteLine(" X=" + x1);
             Console.WriteLine("Вывод первого знака после запятой");
-            Console.WriteLine("{0:0}", d);
+            Console.WriteLine("{0:.0}", d);
             Console.WriteLine("Решение завершено. Для перехода к решению следующего задания нажмите Enter...");
             Console.ReadKey();
             Console.Clear();
