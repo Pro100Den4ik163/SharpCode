@@ -1,0 +1,137 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab
+{
+    class ProgLab1
+    {
+        static void Main()
+        {
+            byte n0;
+            Console.WriteLine("Выберите номер задания:");
+            Console.WriteLine("1.Задание 1");
+            Console.WriteLine("2.Задание 2");
+            Console.WriteLine("3.Задание 3");
+            Console.WriteLine("4.Задание 4");
+            n0 = byte.Parse(Console.ReadLine());
+            switch (n0)
+            { 
+                case 1: controls1();
+                    break;
+                case 2: controls2();
+                    break;
+                case 3: controls3();
+                    break;
+                case 4: controls4();
+                    break;
+                default: Console.Clear();
+                    Main();
+                    break;
+            
+            }
+        }
+         static void controls1()
+        {
+            Console.WriteLine("Вариант №9. Задание 1");
+            Console.WriteLine("Описание");
+            Console.WriteLine("Чтобы перейти к решению задачи нажмите Enter.");
+            Console.ReadKey();
+            Console.WriteLine("Введите значение x");
+            int x = int.Parse(Console.ReadLine()); //Ввод с клавиатуры...
+            Console.Write("Введённое значение");
+            Console.WriteLine(" X=" + x);
+            int rezA = x * x;
+            int rezB = rezA * rezA;
+            int rezC = rezB * rezB;
+            Console.WriteLine("Возведение в квадрат");
+            Console.WriteLine("Z1=" + rezA);
+            Console.WriteLine("Возведение в 4 степень");
+            Console.WriteLine("Z2=" + rezB);
+            Console.WriteLine("Возведение в 8 Степень");
+            Console.WriteLine("Z3=" + rezC);
+            Console.ReadKey();
+            Console.WriteLine("Решение завершено. Для перехода к решению следующего задания нажмите Enter...");
+            Console.ReadKey();
+            Console.Clear();
+            Main();
+
+        }
+         static void controls2()
+        {
+            Console.WriteLine("Задание 2");
+            Console.WriteLine("Чтобы перейти к решению задачи нажмите Enter.");
+            Console.ReadKey();
+            Console.WriteLine("Введите значение x");
+            double x1 = double.Parse(Console.ReadLine()); //Ввод с клавиатуры...
+            Console.Write("Введённое значение");
+            Console.WriteLine(" X=" + x1);
+            x1 = x1 * 10; // начало вычислений...
+            x1 = x1 % 10;
+            int d1 = (int)x1;
+            Console.WriteLine("Вывод первого знака после запятой");
+            Console.WriteLine(d1);
+            Console.WriteLine("Решение завершено. Для перехода к решению следующего задания нажмите Enter...");
+            Console.ReadKey();
+            Console.Clear();
+            Main();
+
+        }
+         static void controls3()
+        {
+            Console.WriteLine("Задание 3.1");
+            Console.WriteLine("Чтобы перейти к решению задачи нажмите Enter.");
+            Console.ReadKey();
+            Console.WriteLine("Введите значения переменных:");
+            double m = double.Parse(Console.ReadLine());
+            double n = double.Parse(Console.ReadLine());
+            double p = double.Parse(Console.ReadLine());
+            double a = double.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
+            double c = double.Parse(Console.ReadLine());
+            double d = double.Parse(Console.ReadLine());
+            double e = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введённые значения: {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}",m, n, p, a, b, c, d, e);
+            Console.ReadKey();
+            p = p + p;
+            double s = 1.0 / 3.0;
+            Console.WriteLine("Считаем числитель...");
+            double C1= 527.0*a / Math.Pow(b,p);
+            double t1= (123.0 + C1) * (123.0 - C1);
+            Console.WriteLine("Считаем знаменатель");
+            double C2 = 856.0 + Math.Pow(c, n) * Math.Pow(d, m);
+            double t2 = Math.Pow(C2, s) * (e - Math.Log(6));
+            Console.WriteLine("Считаем значение X");
+            double rezT = t1 / t2;
+            Console.WriteLine("X=" + rezT);
+            Console.WriteLine("Решение завершено. Для перехода к решению следующего задания нажмите Enter...");
+            Console.ReadKey();
+            Console.Clear();
+            Main();
+
+        }
+         static void controls4()
+        { 
+            Console.WriteLine("Задание 4");
+            Console.WriteLine("Описание");
+            Console.WriteLine("---");
+            Console.ReadKey();
+            double Radius = 6371000;
+            double stp = 1.0 / 2.0;
+            int stp1 = 2;
+            Console.WriteLine("Радиус Земли в метрах =" + Radius);
+            Console.WriteLine("Введите примерную высоту глаз человека от Земли в метрах");
+            double h = double.Parse(Console.ReadLine());
+            double S1 = (Radius + h);
+            S1 = Math.Pow(S1, stp1) - Math.Pow(Radius, stp1);
+            double S = Math.Pow(S1, stp);
+            Console.WriteLine("Расстояние до горизонта" + S);
+            Console.WriteLine("Решение завершено. Для закрытия программы нажмите Enter...");
+            Console.ReadKey();
+            Console.Clear();
+            Main();
+        }
+    }
+}
